@@ -1,38 +1,69 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+body{
+  background-color:rgb(17, 102, 131);
+}
+.tasks{
+  margin: 10px auto;
+  width: 80%;
+  max-width: 780px;
+ 
+  background-color: #f5f5f5;
+  padding: 30px 40px;
+  border-radius: 5px;
   text-align: center;
+  text-transform: uppercase;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tasks h2{
+  font-size: 20px;
+  margin-bottom: 20px;
 }
+.tasks p{
+  text-align: start;
+  padding: 5px 0px;
+  border-bottom: 1px dotted #aaa;
+  margin-bottom: 20px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tasks-todo{
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  background-color:#fff;
+  color:darkslategray;
+  width: 40px;
+  height: 40px;
+  padding: 5px 0px;
+  border-radius: 40px;
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.modal{
+  position:fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+.open--modal{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  max-width: 680px;
+  padding: 40px 20px;
+  position: absolute;
+  background-color: #f5f5f5;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
 }
